@@ -1,0 +1,229 @@
+@import 'colors';
+@import 'mixins';
+@import 'buttons';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+.hero-login{
+    width: 100%;
+    height: 100vh;
+}
+.fixed-body{
+    position: fixed;
+}
+.overlay-left{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+
+    .overlay{
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: $dark-light;
+        position: absolute;
+        opacity: 0.4;
+        z-index: 2;
+        overflow: hidden;
+    }
+}
+
+.left-log{
+    height: 100vh;
+    background-color: $green;
+    position: relative;
+    overflow: hidden;
+    margin-right: 0;
+
+
+    .logo{
+        top: 5em;
+        margin: 8em;
+        @include content-center;
+        position: absolute;
+    }
+
+    .foreground{
+        background-color: $green-blur;
+        position: absolute;
+        top: 20em;
+        margin: 3em;
+        padding: 2em;
+        color: $light;
+        @include content-center;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 7px;
+        
+    }
+}
+
+.center-log{
+    margin-left: 0;
+    height: 100vh;
+    background-color: $white-gray;
+    position: relative;
+
+    .center-content{
+        padding-left: 3em;
+        height: 100%;
+        position: absolute;
+
+        button{
+            @include button;
+            background-color: $light;
+        }
+    
+        form {
+            margin-left: 3em;
+            margin-right: 4em;
+    
+            h1{
+                margin-bottom: 2em;
+            }
+    
+            label{
+                color: $gray;    
+            }
+
+            input{
+                font-size: 12px;
+                text-decoration: none;
+                height: 4em;
+                width: 31em;
+                margin-bottom: 2em;
+                border-radius: 9px;
+            }
+            p a {            
+                width: 9em;
+                margin-left: 15em;
+                margin-top: 1em;
+                color: $gray;
+                text-decoration: none;
+            }
+    
+            .btn {
+                @include btn;
+            }
+    
+            .register a{
+                color: $green;
+                text-decoration: none;
+                margin-left: 1em;
+            }
+        }
+    }
+    .center-footer{
+        margin-top: 43em;
+        border-top: solid 2px $border-light;
+        display: flex;
+        justify-content: start;
+        padding: 1em;
+        padding-left: 3em;       
+
+        .foot-link{
+            background-color: $light;
+            width: 11em;
+            height: 3em;
+            border: solid 1px $light;
+            border-radius: 10px;
+            margin-left: 2em;
+            margin-top: 1em;
+
+            a{
+                text-decoration: none;
+            }
+
+            a img{
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+        }
+    }
+
+}
+
+.right-log{
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 33%;
+    background-color: $light;
+    position: absolute;
+    z-index: 2;
+    overflow-y: scroll;
+
+    .otp{
+        display: inline-flex;
+        padding-left: 3em;
+        padding-top: 1em;
+        margin-bottom: 2em;
+
+        button{
+            @include button;
+            background-color: $light;
+        }
+
+        h3{
+            margin-left: 3em;
+            padding-top: 0.7em;
+        }
+    }
+    .verify{
+        display: flex;
+        justify-content: center;
+        p{
+            background-color: $white-gray;
+            width: 310px;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+    }
+
+   
+
+    .otp-digit{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3em;
+
+
+        .otp-box{
+            border: solid 1px $border-light;
+            border-radius: 6px;
+            width: 3em;
+            height: 3em;
+        }
+    }
+
+    // .btn{
+    //     @include btn-green;
+    //     margin: 4em 14em;
+    //     padding: 2em;
+    //     a{
+    //         text-decoration: none;
+    //     }
+    // }   
+    
+    .resend{
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+
+        .otp-time{
+            margin-left: 1em;
+        }
+    }
+}

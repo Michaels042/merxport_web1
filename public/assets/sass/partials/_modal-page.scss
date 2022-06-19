@@ -1,0 +1,219 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+.hero-modal{
+    width: 100%;
+    height: 100vh;
+    background-color: $gray-light;
+    @include content-center;
+
+    .modal-login{
+        display: flex;
+        flex-direction: column;
+        width: 26em;
+        height: 33em;
+        margin-top: 8em;
+        background: $light;
+        border-radius: 17px;
+        box-shadow: 0px 24px 24px #00000014;
+        padding: 2em;
+
+        img{
+            transform: scale(0.8);
+            margin: 1em 8em; 
+        }
+        h1{
+            margin: 0em 1em 0.5em 1em; 
+        }
+
+        .btn-grnFullWidth {
+            @include btn-greenFullWidth;
+            padding: 12px 24px;
+            text-decoration: none;
+
+        }
+        .btn-greenborder{
+            @include btn-greenborder;
+            padding: 12px 24px;
+            margin-top: 1em;
+            text-decoration: none;
+            color: $green;
+            
+        }
+        .cancel {
+            @include content-center;
+            margin-top: 3em ;
+            a{
+                color: $gray-light;
+                text-decoration: none;
+            }
+
+        }
+        
+    }
+}
+// ....................Generating LC begins.............................................
+.background{
+    height: 130vh;
+    width: 100vw;
+    background-color: $gray;
+    @include content-center;
+    .generatingLC{
+        @include content-centered;
+        h3{
+            margin: 2em;
+        }
+    }
+
+    .background-white{
+        height: 50%;
+        width: 30%;
+        background-color: $light;
+        border-radius: 16px;
+        margin: 2em;
+        .loading-bar{
+            width: 25em;
+            height: 1em;
+            background-color: $green;
+            border-radius: 10px;
+            margin:  2em;
+        }
+        
+        .btn{
+            @include btn-greenpad;
+            margin-bottom: 2em;
+        }
+        .btn-redpad{
+            @include btn-redpad;
+            margin-bottom: 2em;
+        }
+
+        .greenText{
+            color: $green;
+            text-decoration: none;
+        }
+    }
+}
+// ....................Generating LC ends...............................................
+
+// ........................Apply for LC begins..........................................
+
+.background-whiteFull{
+    height: 100%;
+    width: 30%;
+    background-color: $light;
+    border-radius: 16px;
+    margin: 2em;
+    .loading-bar{
+        width: 25em;
+        height: 1em;
+        background-color: $green;
+        border-radius: 10px;
+        margin:  2em;
+    }
+    
+    .btn{
+        @include btn-greenpad;
+        margin-bottom: 2em;
+    }
+    .btn-redpad{
+        @include btn-redpad;
+        margin-bottom: 2em;
+    }
+
+    .greenText{
+        color: $green;
+        text-decoration: none;
+    }
+}
+.applyLC{
+    h3{
+        @include content-centered;
+    }
+   
+    .form-check{
+        input{
+            background-color: $green;
+            border: solid 1px $green;
+            transform: scale(1.5);
+        }
+    }
+}
+.text-box{
+    border: solid 1px $border-light;
+    width: 27em;
+    height: 100%;
+    padding: 1em;
+    margin: 2em 1.5em;
+    border-radius: 10px;
+    img{
+        margin-top: 3em;
+    }
+    .inner-text{
+        padding: 0.5em;
+        border-bottom: solid 1px $border-light;
+    }
+    label{
+        margin-top: 1em;
+    }
+    
+    .checked{
+        background-color: $background-light;
+        border-radius: 6px;
+    }
+    .far-right{
+        display: flex;
+        justify-content: end;
+    }
+    .inner-radio{
+        padding: 1em 1em;
+        label{
+            margin-left: 1em;
+            color: $green;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        input{
+            margin-top: 1em;
+            background-color: $green ;
+            border: solid 1px $green;
+        }
+    }
+    #button-addon3{
+        @include button-choose-file;
+        margin-top: -2.6em;
+        margin-left: 18.5em;
+
+    }
+    #button-addon2{
+        @include button-choose-file;
+        margin-top: -2.6em;
+        margin-left: 24.5em;
+
+    }
+    .greenText{
+        color: $green;
+    }
+    .maxFile{
+        margin-left: 11em;
+    }
+}
+.action-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    .btn-greenpad{
+        @include btn-greenpad;
+        text-decoration: none;
+    }
+}
+.btn{
+    margin-bottom: 1em;
+    
+}
+// ........................Apply for LC ends.........................................
+
+// ........................Upload LC begins.........................................

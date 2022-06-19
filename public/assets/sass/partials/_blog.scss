@@ -1,0 +1,63 @@
+@import 'colors';
+@import 'mixins';
+@import 'navbar';
+
+
+.hero-blog{
+    background-color: $blue-light;
+    padding: 6em 6em 0 6em;
+    height: 89.8vh;
+    border-radius: 40px 40px 0 0;
+    h1{
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .blog-card{
+            list-style: none;
+            padding: 0.5em;
+            border-radius: 16px;
+            width: 18em;
+            box-shadow: 0px 12px 16px #a18e8e14;
+            overflow: hidden;
+        
+             img{
+                border-radius: 16px;
+                width: 100%;
+                height: 14em;
+                object-fit: contain;
+            }
+        
+            .blog-text{
+                margin-top: 1em;
+                h6{
+                    font-weight: 600;
+                    color: $dark-light;
+                }
+                p{
+                    font-size: 13px;
+                    margin-top: 1em;
+                }
+        
+            }
+    
+            .btn {
+                margin-top: 2em;
+                width: 8em;
+                @include btn-smpad;
+    
+            } 
+        }
+        
+    }
+
+   
+
+}
+
+

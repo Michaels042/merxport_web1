@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+} 
+
+.hero-welcome{
+    width: 100%;
+    height: 100%;
+    background-color: $white-gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-logo{
+    @include content-center;
+    padding-top: 2em;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    width: 60em;
+    height: 100%;
+    padding: 3em 3em;
+    margin: 5em 19em;
+    background-color: $light;
+    text-align: center;
+    border-radius: 10px; 
+
+    p{
+        font-size: 13px;
+    }
+
+    .wel-acc{
+        @include content-center;
+        justify-content: space-evenly;
+    }
+    .welcome-acc{
+        width: 300px;
+        height: 180px;
+        text-decoration: none;
+        margin-bottom: 3em;
+        border-radius: 16px;
+        color: $dark-light;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+
+
+        &:hover {
+            background-color: $background-light;
+            transition: all 0.3s ease;
+        }
+    }
+    .welcome-account{
+        @include welcome-account;
+    }
+
+    .acc-form{
+        display: flex;
+        justify-content: space-between;
+        border-top: solid 5px $border-light;
+        padding-top: 3em;
+    }
+
+    form{
+        width: 45%;
+        height: 100%;
+
+        label{
+            margin-bottom: 0;
+            margin-right: 19.5em;
+            padding-bottom: 0;
+            font-size: 14px;
+        }
+
+        .form-check{
+            margin-top: 1em;
+            .form-check-input{
+                background-color: $green;
+                border: solid 1px $green;
+                transform: scale(1.5);
+                margin-right: 1em;
+            }
+        }
+        
+        input{
+            margin-bottom: 1em;
+            margin-top: 0;
+
+            .placeholder{
+                font-size: 11px;   
+            }
+        }
+        button{
+            margin-top: -7em;
+            margin-left: 23em;
+            margin-right: 0;
+            padding: 0;
+            width: 96px;
+            height: 2em;
+            background-color: $blue-light;
+            color: $gray;
+            border-radius: 6px;
+            font-size: 12px;
+            border: none;
+            outline: none;
+        }
+
+        .btn-greenFullWidth{
+            @include btn-greenFullWidth;
+            @include content-center;
+        }
+        p{
+            padding-top: 0;
+            margin-top: 0;
+            margin-left: 20em;
+            line-height: 1px;
+        }
+
+    }
+}
+.buyer, .seller{
+    display: none;
+}

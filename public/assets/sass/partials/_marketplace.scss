@@ -1,0 +1,770 @@
+@import 'colors';
+@import 'mixins';
+@import 'navbar';
+@import 'base';
+
+.hero-marketplace{
+    background-color: $blue-light;
+    padding: 2em 6em;
+    height: 100%;
+    border-radius: 40px 40px 0 0;
+    
+// ----------------------------------------------------------------------
+// Marketplace-Left Column Begins
+// ----------------------------------------------------------------------
+
+    .market-seearch{
+        @include search-bar;
+        margin-bottom: 1em;
+    }
+
+    .request-list{
+        margin-bottom: 1em;
+        background-color: $light;
+        border-radius: 16px;
+        box-shadow: 0px 8px 16px #0000001F;
+
+        a{
+            color: gray;
+            text-decoration: none;
+        }
+        .active{
+            background-color: $green;
+            color: $light;
+        }
+        .requested{
+            height: 4em;
+            width: 100%;
+            margin: 0;
+            padding-left: 2em;
+            @include items-center;
+            border-radius: 16px 16px 0 0;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .listed{
+            height: 4em;
+            width: 100%;
+            margin-top: 0;
+            padding-left: 2em;
+            @include items-center;
+            border-radius: 0 0 16px 16px;
+            text-decoration: none;
+            font-size: 13px;
+           
+        }
+
+    }
+
+    .priceCategoryCountry{
+        width: 100%;
+        height: 98vh;
+        background-color: $light;
+        border-radius: 16px;
+        padding-bottom: 0;
+        box-shadow: 0px 8px 16px #0000001F;
+
+        p{
+            padding: 1em;
+            color: $gray;
+        }
+
+        .price{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: solid 1px $border-light;
+            padding-bottom: 2em;
+            padding: 0 1em 1em 1em;
+
+            .price-range{
+                border: solid 1px $border-light;
+                width: 8em;
+                height: 4em;
+                @include items-center;
+                justify-content: center;
+                border-radius: 10px;
+                color: $gray-light;
+            }
+            .bar-range{
+                width: 3em;
+                height: 2px;
+                border: solid 1px $border-light;
+                align-self: center;
+            }
+        }
+
+        .category{
+            border-bottom: solid 1px $border-light;
+            padding: 0.5em;
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                justify-content: space-evenly;
+               
+                li{
+                    background-color: $blue-light;
+                    height: 3em;
+                    @include items-center;
+                    margin: 0.5em;
+                    padding: 0 0.5em;
+                    border-radius: 25px;
+
+                    a{
+                        text-decoration: none;
+                        color: $gray;
+                        font-size: 13px;
+                    }
+                }
+
+                .alternate{
+                    background-color: $background-light;
+                    height: 3em;
+                    @include items-center;
+                    margin: 0.5em;
+                    padding: 0 0.5em;
+                    border-radius: 25px;
+
+                    a{
+                        text-decoration: none;
+                        color: $green;
+                        font-size: 13px;
+                    }
+                }                  
+            }
+        }
+
+        .location{
+            padding: 1.5em;
+            border-bottom: solid 1px $border-light;
+
+            label{
+                margin-bottom: 1em;
+                color: $gray;
+            }
+        }
+        .switch{
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: solid 1px $border-light;
+            color: $gray;
+            margin-bottom: 0;
+
+            .switchButton .active{
+               @include switch-button-active;
+            }
+
+           .switchButton{
+               @include switch-button;
+
+           }
+        }
+    }
+
+// ----------------------------------------------------------------------
+// Marketplace-Left Column Ends
+// ----------------------------------------------------------------------
+
+
+    .right-header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+
+        .sort span{
+            margin-right: 1em;
+            a{
+                text-decoration: none;
+                font-size: 14px;
+                color: $gray;
+            }
+             .active{
+                color: $green;
+                text-decoration: underline;
+            }
+        }
+        select{
+            background-color: transparent;
+            border: transparent;
+            color: $gray;
+        }
+        .top-btn{
+            a{
+                text-decoration: none;
+                padding: 1em;
+                margin-right: 1em;
+                border-radius: 10px;
+            }
+            .btn-light{
+                background-color: $light;
+                color: $gray;
+            }
+            .active{
+                background-color: $green;
+                color: $light;
+            }
+        }
+
+    }
+    .order-date{
+        color: $gray;
+        margin: 1em;
+    }
+
+    .product-title{
+        width: 95%;
+        padding-left: 9em;
+        h6{
+            color:$gray;           
+        }
+    }
+    
+// ----------------------------------------------------------------------
+// Marketplace  Notification Modal begins
+// ----------------------------------------------------------------------
+
+    .notification{
+        // display: none;
+        position: absolute;
+        left: 53em;
+        top: 4em;
+        width: 17em;
+        height: 45%;
+        background-color: $light;
+        box-shadow: 0px 8px 16px #0000001F;
+        border-radius: 16px;
+
+        a{
+            text-decoration: none;
+            color: $gray;            
+        }
+
+        .card-post{
+            @include content-center;
+            margin: 1em;
+            overflow: hidden;
+            &:hover {
+                background: $background-light;
+                transition: all 0.3s ease;
+            }
+            
+            .thumbnail img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50px;
+                margin-right: 0.5em;
+
+            }
+            .rightt{
+                margin-top: 0.5em;
+                width: 80%;
+                line-height: 0.5px;
+
+
+                .dealer{
+                    font-weight: 700;
+                    font-size: 11px;
+
+                }
+                .time{
+                    font-size: 9px;
+                }
+            }
+        }
+        .green-text{
+            @include green-text;
+        }
+    }
+
+// ----------------------------------------------------------------------
+// Marketplace  Notification Modal Ends
+// ----------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------
+// Marketplace  MyAccount Modal Begins
+// ----------------------------------------------------------------------
+
+.myaccount{
+    display: hidden;
+    position: absolute;
+    width: 20em;
+    height: 25%;
+    top: 5em;
+    right: 6em;
+    background-color: $light;
+    box-shadow: 0px 8px 16px #0000001F;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1em;
+
+    .top{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .account-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 6em;
+        font-size: 14px;
+        &:hover {
+            background: $blue-light;
+            transition: all 0.3s ease;
+        }
+
+        a{
+            text-decoration: none;
+            color: $gray;   
+            display: Block;
+            align-content: center;  
+            // width: 6em;       
+        }
+    }
+
+}
+
+// Marketplace  MyAccount Modal Ends
+
+// Orders Clicked- Buyer Requests Begins..................................
+        .request-selector{
+            width: 20em;
+            .requestSelector-label{
+                display: flex;
+                justify-content: space-around;
+                .active{
+                    @include green-text;
+                }
+            }
+            .req-bar{
+                display: flex;
+                margin: 1em;
+                .active{
+                    background-color: $green;
+                    border: solid 2px $green;
+                }
+                .request-bar{
+                    width: 10em;
+                    height:0.5em;
+                    border-radius: 5px;
+                    border: solid 1px $gray;
+                }
+
+            }
+            
+    }
+
+// Orders Clicked- Buyer Requests Ends.....................................
+
+
+// ----------------------------------------------------------------------
+// Marketplace-list Begins
+// ----------------------------------------------------------------------
+
+    .market-list{
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        overflow: hidden;
+        a{
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .product-list{
+            background-color: $light;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            border-radius: 16px;
+            width: 100%;
+            height: 5em;
+            padding: 1em;
+            margin-top: 0.5em;
+            &:hover {
+                background: $background-light;
+                transition: all 0.3s ease;
+            }
+            img{
+                width: 3em;
+                height: 3em;
+                border-radius: 10px;
+                margin-left: 2em;
+            }
+            .list-text{
+                @include list-text;
+                width: 100%;
+                padding: 1em 3em;
+                display: flex;
+                justify-content: space-between;
+                .units{
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: start;
+
+                    .tab-yellow{
+                        display: flex;
+                        justify-content: center;
+                        width: 3em;
+                        height: 3em;
+                        background-color: $yellow;
+                        border-radius: 6px;
+
+                        img{
+                            transform: scale(0.5);
+                            margin-right: 2em;
+                        }
+                    }
+                }
+
+                .name-bid{
+                    display: flex;
+                    .tab-yellow{
+                        padding: 1em 1em 2em 1em;
+                        background-color: $yellow;
+                        color: $dark-light;
+                        border-radius: 6px;
+                        font-size: 13px;
+                    }  
+                    p{
+                        margin: -1em 0 0 0.5em;  
+                    }
+                }
+            }
+        }
+    }
+// ----------------------------------------------------------------------
+// Marketplace-list ends
+// ----------------------------------------------------------------------
+
+// ----------------------------------------------------------------------
+// Marketplace-Grid Begins
+// ----------------------------------------------------------------------
+
+
+    .market-gallery{
+        background-color: $light;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        overflow: hidden;
+
+        a{
+            text-decoration: none;
+            width: 33%;
+        }
+        .product{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            width: 33.3%;
+            padding: 1em;
+            text-align: center;
+            &:hover {
+                background: $background-light;
+                transition: all 0.3s ease;
+            }
+            img{
+                width: 5em;
+                height: 5em;
+                border-radius: 6px;
+            }
+            .text{
+                @include product-text;
+            }
+        }
+            .product:nth-child(1),
+            .product:nth-child(2),
+            .product:nth-child(3) {
+                border-bottom: solid 1px $border-light;
+            }
+
+            .product:nth-child(7),
+            .product:nth-child(8),
+            .product:nth-child(9),
+            .product:nth-child(10),
+            .product:nth-child(11),
+            .product:nth-child(12) {
+                border-top: solid 1px $border-light;
+            }
+            .product:nth-child(1),
+            .product:nth-child(4),
+            .product:nth-child(7),
+            .product:nth-child(10) {
+                border-right: solid 1px $border-light;
+            }
+            .product:nth-child(3),
+            .product:nth-child(6),
+            .product:nth-child(9),
+            .product:nth-child(12) {
+                border-left: solid 1px $border-light;
+            }
+    }
+
+    // ----------------------------------------------------------------------
+// Marketplace-Grid Ends
+// ----------------------------------------------------------------------
+
+    .pagination{
+        display: flex;
+        margin-bottom: 3em;
+
+        .active{
+            background: $green;
+            color: $light;
+        }
+
+        a{
+            background: $light;
+            text-decoration: none;
+            color: gray;
+            margin: 2em 1em 1em 0;
+            padding: 1em;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 10px;
+        }
+
+        .direction{
+            background: transparent;
+            color: $gray;
+        }   
+    }
+}
+// ----------------------------------------------------------------------
+// Marketplace-product Begins
+// ----------------------------------------------------------------------
+
+  .box{
+     width: 7em;
+     height: 2em;
+     margin-bottom: 4em;
+     a{
+         text-decoration: none;
+     }
+    button{
+        @include button;
+        background: $light;
+    }
+}
+
+.prod-image{
+    margin-bottom: 2em;
+       img{
+        object-fit: cover;
+        width: 450px;
+        height: auto;    
+    }
+}
+.thumbnail {
+    display: flex;
+    a img{
+        margin-right: 1em;
+        border-radius: 12px;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+    .active img {
+        border: solid 2px $green;
+    }   
+}
+.prod-details{
+    padding: 0 11em 1em 3em;
+    
+    .green-name{
+        color: $green;
+        font-weight: 700;
+    }
+    .units{
+        color: $gray;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .pricing{
+        display: flex;
+        justify-content: space-between;
+        margin: 2em 0;
+    }
+    
+// ----------------------------------------------------------------------
+// sellerListingOpened-UserLoggedIn Begins
+// ----------------------------------------------------------------------
+
+    .pricin{
+        display: flex;
+        justify-content: space-between;
+        margin: 2em 0;
+        padding: 0;
+        width: 300px;
+        // height: 80px;
+        .action-button{
+            display: flex;
+            justify-content: start;
+            margin-top: 3em;
+            .btn-greenpad{
+                @include btn-greenpad;
+                text-decoration: none;
+            }
+        }
+        .unit-price{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 3em;
+            p{
+                padding-top: 7px;
+                padding-left: 7px;
+            }
+        }
+    }
+
+// ----------------------------------------------------------------------
+// sellerListingOpened-UserLoggedIn ends
+// ----------------------------------------------------------------------
+
+    .price-image{
+        display: flex;
+        justify-content: space-between;
+        img{
+            margin-right: 0.5em;
+        }
+    }
+    
+    .action-button{
+        display: flex;
+        justify-content: start;
+        margin-top: 3em;
+        .btn-redpad{
+            @include btn-redpad;
+            text-decoration: none;
+        }
+        .btn-greenpad{
+            @include btn-greenpad;
+            text-decoration: none;
+        }
+        .btn-greeninactive{
+            @include btn-greenpad;
+            text-decoration: none;
+            opacity: 0.2;
+        }
+    }
+    .desc-wrap{
+        background: $light;
+        border-radius: 10px;
+        padding: 1em;
+        margin-top: 1em;
+        color: $dark-light;
+        .form-check{
+            margin-top: 1em;
+            padding-left: 3em;
+            input{
+                background-color: $green;
+                border: solid 1px $green;
+                border-radius: 50%;
+            }
+            .bg-light{
+                background-color:$background-light;
+               margin-left: 15em;
+               padding: 0.5em;
+            }
+        }
+        
+        .innerText{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: solid 1px $border-light;
+            line-height: 2em;
+            a{
+                color: $green;
+            }
+        }
+        .biz-info{
+            display: flex;
+            border-bottom: solid 1px $border-light;
+            margin: 1em;
+        }
+        .inner-text{
+            line-height: 12px;
+            .unit-price{
+                display: flex;
+                p{
+                    margin-right: 1em;
+                }
+            }
+        }
+        a{
+            text-decoration: none;
+            color: $gray;
+            display: flex;
+            align-items: center;
+        }
+       
+        .desc-header, .desc-inner{
+            display: flex;
+            justify-content: space-between;
+        }
+        h5{
+            font-weight: bold;
+        }
+         .greentext{
+            @include greenText;
+        }
+    }
+   
+    .next{
+        position: absolute;
+        display: flex;
+        color: $light;
+        width: 100px;
+        height: 200px;
+        right: 17em;
+        background-color: $light;
+
+        span{
+            display: flex;
+            background-color: $green;
+            margin: 4em 0 3em 3em;
+            width: 3em;
+            height: 2.5em;
+            padding: 0.4em 1.1em;
+            a{
+                text-decoration: none;
+                color: $light;
+            }
+        }
+    }
+
+    .prod-gallery{
+        background-color: $light;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        overflow: hidden;
+
+        .prod{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            width: 220px;
+            padding: 1em;
+            text-align: center;
+            img{
+                width: 5em;
+                height: 5em;
+                border-radius: 6px;
+            }
+            .text{
+                @include product-text;    
+            }
+        }
+    }
+}

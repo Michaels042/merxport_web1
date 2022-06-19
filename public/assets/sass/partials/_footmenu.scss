@@ -1,0 +1,52 @@
+@import 'colors';
+@import 'media-queries';
+@import 'mixins';
+
+
+.foot-menu{
+    margin-top: 13em;
+    margin-left: 6em;
+    margin-right: 6em;
+
+    .foot-logo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5em;
+    }
+    
+    .foot-items ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem calc((90vw - 1200px) / 2);
+        flex-direction: row;
+        margin-bottom: 5em;
+
+        li{
+            display: flex;
+            flex-direction: column;   
+            h5{
+                color: $gray;
+                font-weight: 600;
+            }
+            a{
+                margin-top: 1em;
+                text-decoration: none;
+                color: $gray;
+
+
+            }
+            .social-icons{
+                font-size: 1.5em;
+                @include content-center;
+                justify-content: space-between;
+            }
+        }
+
+        img{
+            width: 12em;
+            height: 4em;
+            margin-top: 2em;
+        }
+    }
+}

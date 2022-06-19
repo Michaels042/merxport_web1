@@ -1,0 +1,377 @@
+
+.hero-fullBody{
+    background-color: $blue-light;
+    height: 100%;
+    width: 100vw;
+    position: relative; 
+    padding: 0;
+    margin: 0;   
+    .logo{
+        display: flex;
+        justify-content: center;
+        transform: scale(0.5);
+    }
+
+    .mid-green{
+        @include middleGreen;
+        height: 20em;
+
+       
+    }
+    .lower-white{
+        background-color: $light;
+        width: 30em;
+        height: 15em;
+        position: absolute;
+        padding: 2em;
+        border-radius: 10px;
+        margin-left: 35em;
+        margin-top: -4em;
+
+            .inner-text{
+                border-bottom: solid 1px $blue-light;
+                padding-bottom: 0.5em;
+                display: flex;
+                justify-content: space-between;
+            }
+        
+    }
+    .btn{
+        @include btn-greenpad;
+        margin: 13em 43em;
+        position: absolute;
+    }
+    .home a{
+        text-decoration: none;
+        color: $green;
+        margin: 19em 46em;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// ........................CREATE CLICKED BEGINS..............................
+        .green-line{
+            height: 1em;
+            margin-bottom: 7em;
+            background-color: $green;
+            width: 100%;
+            border-radius: 30px 30px 0 0;
+        }
+
+    .top-green-wrapper{
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 22em;
+        border-radius: 30px 30px 0 0;
+       
+        .top-green{
+            color: $light;
+            padding-top: 0;
+            @include content-centered;
+            
+            .copy{
+                display: flex;
+                .yellowText{
+                    color: $yellow;
+                }
+                a{
+                    text-decoration: none;
+                    color: $light;
+                    margin-left: 1em;
+                }
+            }   
+        }
+    }
+
+    .lower-white-box{
+        width: 40em;
+        height: 30em;
+        margin-left: 29em;
+        margin-top: -7em;
+
+            .buyer{
+                @include white-box-content;
+                background-color: $light;
+                border-radius: 24px 24px 0 0;
+            }
+            .sellers{
+                @include white-box-content;
+                background-color: $background-light;
+                border-radius: 0 0 24px 24px;
+                box-shadow: 0px 8px 16px #00000014;
+            }
+    }
+
+// ........................CREATE CLICKED ENDS..............................
+
+// ..........................actionDone-2 begins.........................................
+
+.hero-bid{
+    @include content-centered;
+    padding: 2em;
+
+        .hero-bid-inner{
+            background-color: $light;
+            width: 35em;
+            height: 40em;
+            border-radius: 24px;
+            flex-direction: column;
+            box-shadow: 0px 8px 16px #0000001F;
+            .mid-green{
+               @include middleGreen;
+                height: 17em;
+            }
+            .action-button{
+                display: flex;
+                justify-content: center;
+                .btn-greenpad{
+                    @include btn-greenpad;
+                    text-decoration: none;
+                }
+            }
+            a{
+                color: $green;
+                text-decoration: none;
+                @include content-centered;
+            }
+        }
+        
+    }
+   
+// ..........................actionDone-2 ends........................................
+// ..........................services-clicked begins........................................
+
+.services-content{
+    background-color: $light;
+    border-radius: 24px;
+    margin: 0 5em;
+    margin-top: -7em;
+    padding: 4em 2em;
+    box-shadow: 0px 8px 16px #0000001F;
+
+    img{
+        margin: 1em 0;
+    }
+    p{
+        margin-bottom: 2em;
+    }
+    a{
+        text-decoration: none;
+    }
+    .btn-greenborder{
+        @include btn;     
+    }
+}
+// ..........................services-clicked ends........................................
+// ..........................wallet-clicked begins........................................
+.textBox{
+    border: solid 1px $border-light;
+    border-radius: 24px;
+    width: 25em;
+    padding: 1.5em;
+    .innerText{
+        border-bottom: solid 1px $border-light;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+        .ask{
+            background-color: $light;
+            color: $dark-light;
+            padding: 0.3em;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-bottom: 1em;
+        }
+    }
+}
+.wallet-content-wrapper{
+    @include content-centered;    
+        .wallet-content{
+        background-color: $light;
+        border-radius: 24px;
+        margin-top: -2em;
+        // padding: 2em;
+        width: 55em;
+        height: 20em;
+        box-shadow: 0px 8px 16px #0000001F;
+        display: flex;
+        justify-items: center;
+            .inner-content{
+                margin: 1em;
+                padding: 2em 0 0 1.5em;
+                border-radius: 16px;   
+                // width: 17em;
+                height: 18em;
+                box-shadow: inset 0px 0px 8px 16px #00000029;
+                background-color: $gray-light;
+
+                .text-content{
+                    h5{
+                        font-weight: 600;
+                        width: 100%;
+                        margin-right: 1em;
+                    }
+                    .img-bg{
+                        width: 3em;
+                        height: 3em;
+                        border-radius: 4px;
+                        margin-bottom: 1em;
+                    }
+                    img{
+                        margin: 0;
+                    }
+                    p{
+                        margin-bottom: 2em;
+                        padding-right: 2em;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                    .btn-greenborder{
+                        @include btn-smpad; 
+                        padding: 1em;  
+                        width: 5em; 
+                        background-color: $light; 
+                    }
+
+                }
+                
+            }
+        
+        }
+}
+
+
+// ..........................wallet-clicked ends........................................
+// ..........................P R O F I L E  Begins.......................................
+.profile{
+    padding: 0 2em;
+}
+.profile-left{
+    width: 20em;
+    margin-left: 5em;
+    .profile-image{
+        img{
+            width: 100%;
+            border-radius: 16px 16px 0 0;
+        }
+        
+    }
+    .profile-data{
+        background-color: $light;
+        .name-location{
+            text-align:  center;
+            padding-top: 1em;
+            margin-bottom: 3em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .location{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin-right: 1em;
+                }
+            }
+        }
+
+       
+        .profile_links_wrapper{
+            margin-top: 1em;
+            .profile_link{
+                border-bottom: solid 1px $border-light;
+    
+                .link{
+                    display: flex;
+                    justify-content: space-between;
+                    text-decoration: none;
+                    color: $gray;
+                    margin: 1em 0;
+                    padding: 0 1em;
+
+    
+                }
+            }
+    
+        }
+    
+    }
+   
+}
+.profile-right{
+    width: 70em;
+}
+
+// ..........................P R O F I L E  Ends........................................
+// ............................L E G  A L  Begins.......................................
+.hero-bid-legal{
+    background-color: $light;
+    width: 65%;
+    height: 100%;
+    box-shadow: 0px 8px 16px #0000001F;
+
+    .legal-wrapper{
+       display: flex;
+       justify-content: center;
+
+        .legal-top-btn{
+            display: flex;
+           justify-content: space-between;
+           width: 30em;
+
+            a{
+                text-decoration: none;
+                padding: 1em;
+                margin-right: 1em;
+                border-radius: 10px;
+            }
+            .btn-light{
+                border: solid 1px $gray;
+                color: $gray;
+            }
+            .active{
+                background-color: $green;
+                color: $light;
+                box-shadow: 0px 8px 16px #0000001F;
+
+            }
+        }
+        
+    }
+    .legal-doc{
+        display: flex;
+        justify-content: center;
+       
+        .legal-doc-inner{
+            padding: 2em;
+            margin: 2em;
+            background-color: $blue-light;
+            border-radius: 10px;
+            width: 80%;
+
+        }
+    }
+
+
+      
+    .action-button{
+        display: flex;
+        justify-content: center;
+        .btn-greenpad{
+            @include btn-greenpad;
+            text-decoration: none;
+        }
+    }
+    a{
+        color: $green;
+        text-decoration: none;
+        @include content-centered;
+    }
+}
+// ............................L E G  A L  Ends.......................................
+

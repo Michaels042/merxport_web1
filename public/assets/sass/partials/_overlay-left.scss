@@ -1,0 +1,351 @@
+.right-header{
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+    padding-top: 1em;
+
+    button{
+        @include button;
+        background-color: $light;
+    }
+
+    h3{
+        margin-left: 3em;
+        padding-top: 0.7em;
+    }
+    // ...............legal-Title Begins.................
+    .legal-title{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        h3{
+            margin: 1em;
+        }
+    }
+    // ...............legal-Title Ends.................
+
+}
+.right-body{
+    margin: 0;
+    padding: 1em;
+    @include content-centered;
+
+        .text-box{
+        padding: 1em;
+        margin-bottom: 1em;
+        border: solid 1px $blue-light;
+        border-radius: 10px;
+
+            .background-light{
+                background-color: $background-light;
+                color: $green;
+                margin-left: 0;
+                margin-top: 1em;
+            }
+        }
+        .action-button1{
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+            .btn-greenpad{
+                @include btn-greenpad;
+                // margin: 5em 7em;
+                text-decoration: none;
+            }
+        }
+        
+        .inner-text{
+            border-bottom: solid 1px $blue-light;
+            padding-bottom: 0.5em;
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .range-selector{
+            width: 100%;
+            position: relative;
+            #slider{
+                width: 100%;
+                height: 7px;
+                outline: none;
+                border-radius: 3px;
+            }
+    }
+    
+    .inner-box-green {
+        padding: 1em;
+        margin-bottom: 1em;
+        border-radius: 10px;
+        border: solid 1px $green;
+    }
+    .inner-box {
+        padding: 1em;
+        margin-bottom: 1em;
+        border-radius: 10px;
+        border: solid 1px $blue-light;
+
+    }
+    .form-content{
+        input{
+            right: 0;
+            margin-right: 0;
+            border-radius: 50%;
+        }
+        .title-choice-green{
+            display: flex;
+            justify-content: space-between;
+            color: $green;
+
+            label{
+                font-weight: bold;
+                margin-top: 0;
+            }
+            input{
+                background-color: $green;
+                border: solid 1px $green;
+            }
+            #buttonAddon{
+                @include button-choose-file-green;
+                margin-left: 16em;
+            }
+        }
+        .title-choice{
+            display: flex;
+            justify-content: space-between;
+
+            label{
+                font-weight: bold;
+                color: $gray;
+                margin-top: 0;
+            }
+            input{
+                background-color: $gray ;
+                right: 0;
+                margin-right: 0;
+            }
+            #buttonAddon{
+                @include button-choose-file;
+                margin-left: 16em;
+
+            }
+        }
+        .checked{
+            background-color: $background-light;
+            border-radius: 6px;
+        }
+        .inner-radio{
+            padding: 1em 1em;
+            label{
+                margin-left: 1em;
+                color: $green;
+                font-weight: bold;
+                font-size: 13px;
+            }
+            input{
+                background-color: $green ;
+                border: solid 1px $green;
+            }
+        }
+        .gray{
+            color: $gray;
+            font-weight: bold;
+        }
+        .green{
+            color: $green;
+            font-weight: bold;
+        }
+    }  
+    p{
+        background-color: $blue-light;
+        padding: 1em;
+        border-radius: 6px;
+    }  
+}
+// ..........................Place Bid Begins...................................
+.bid{
+    h4{
+        margin: 2em;
+    }
+    .form-row{
+        display: inline-flex;
+        margin-bottom: 1em;
+        input{
+            width: 11em;
+            margin-right: 1em;
+        }
+    }
+    .blue-light{
+        background: $blue-light;
+        margin: 1em 6em;
+        padding: 1em;
+        text-align: center;
+       
+    }
+    .form-check-input{
+        background-color: $green;
+        border: solid 1px $green;
+    }
+    
+    .action-button{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3em;
+        .btn-redpad{
+            @include btn-redpad;
+            text-decoration: none;
+        }
+        .btn-greenpad{
+            @include btn-greenpad;
+            text-decoration: none;
+        }
+    }
+   
+
+    .bankInfo{
+        margin: 1em;
+        input{
+            width: 80%;
+            margin-bottom: 1em;
+        }
+    }
+
+}
+    
+// ..........................Place Bid Ends...................................
+// ..........................make RFQ from existing one begins..................................
+
+.topButton-text{
+    display: flex;
+    align-items: center;
+    h4{
+        margin-left: 1em;
+    }
+}
+
+// ..........................make RFQ from existing one ends..................................
+// ..........................make product from an existing one begins.........................
+
+.productList{
+    width: 70%;
+}
+
+// ..........................make product from an existing one ends...........................
+// ..........................verifySeller-inner begins...........................
+
+.verifySeller-inner{
+    padding:  0 3em;
+    label{
+        margin-top: 1em;
+    }
+    .fundingText{
+        background-color: $blue-light;
+        border-radius: 10px;
+        margin-left: 1em;
+    }
+}
+// ..........................verifySeller-inner ends...........................
+// ..........................buyerAccount-Profile begins...........................
+
+.buyerAccount-form{
+    margin-top: 3em;
+    padding: 2em;
+    .form-group{
+        width: 25em;
+    }
+        input, select{
+            border-radius: 8px;
+            margin-bottom: 1em;
+            // width: 100%;
+
+        }
+}
+// ..........................buyerAccount-Profile ends...........................
+
+.form-check{
+    background-color: $background-light;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    .form-check-input{
+        border-radius: 50%;
+        border: solid 1px $green;
+        background-color: $green;
+        margin: 0.5em;
+    }
+    .form-check-label{
+        color: $green;
+    }
+}
+
+    .interestedProducts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .form-check-updatePref{
+            margin: 1em 1em 0 0;
+            padding: 0 0.3em;
+            border-radius: 16px; 
+            background-color: $yellow;
+       
+        .form-check-input{
+            border-radius: 50%;
+            border: solid 1px $green;
+            background-color: $green;
+            margin: 0.2em;
+        }
+        .form-check-label{
+            color: $green;
+
+        }
+    }
+    .form-check-disabled{
+        margin: 1em 1em 0 0;
+        padding: 0 0.3em;
+        border-radius: 16px; 
+       border: solid 1px $border-light;
+   
+    .form-check-input{
+        border-radius: 50%;
+        border: solid 1px $gray;
+        margin: 0.2em;
+    }
+    .form-check-label{
+        color: $gray-light;
+
+    }
+}
+
+}
+    #button-addon2{
+        @include button-choose-file;
+        margin-left: 22em;
+        margin-top: -4em;
+    }
+    // ..............VERIFY OTP BEGINS..............................
+    .verifyCheck{
+        display: flex;
+        justify-content: center;
+        margin: 3em;
+
+            .bar{
+                width: 2em;
+                height: 2px;
+                border-bottom: solid 1px $border-light;
+                align-self: center;
+
+            }
+            .form_check{
+                .form-check-input{
+                    border-radius: 50%;
+                    border: solid 1px $green;
+                    background-color: $green;
+                    // margin: 0.5em;
+                }
+                .form-check-label{
+                    color: $green;
+                }
+            }
+
+    }
+   
+    // ..............VERIFY OTP ENDS..............................

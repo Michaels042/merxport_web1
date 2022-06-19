@@ -1,0 +1,307 @@
+@import 'colors';
+@import 'media-queries';
+@import 'mixins';
+@import 'buttons';
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    background-color: $background-light; 
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((90vw - 1200px) / 2);
+    z-index: 1;
+    position: relative;
+
+    .navbar__logo {
+        @include content-center;
+    }
+    .navbar__logo img{
+        width: 8em;
+    }
+
+    &__bars {
+        opacity: 0;
+
+        @include tablet {
+            color: $dark;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+        }
+    }
+
+
+    .nav-item{
+        padding: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+        margin: 0 7px;
+        position: relative;
+    }
+    .active{
+        color: $green!important;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+
+    }
+    
+
+    .link{
+        position: relative;
+        text-decoration: none;
+        color: $gray;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+    }
+    .link:after{
+        content: "";
+        position: absolute;
+        background-color: $green;
+        width: 0;
+        left: 50%;
+        bottom: -10px;
+        transition: all 0.3s ease;
+
+    }
+
+    .link:hover{
+        color: $green;
+        font-weight: 600;
+    }
+
+    .link:hover:after{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+
+    }
+    .btn {
+        @include btn;
+    
+    }
+
+    
+
+
+
+    // &__menu {
+    //     @include content-center;
+    //     list-style: none;
+    //     text-align: center;
+    //     margin-right: 24px;
+
+    //     @include tablet {
+    //         display: none;
+    //     }
+
+    //     &--links {
+    //         color: $dark;
+    //         @include content-center;
+    //         justify-content: center;
+    //         text-decoration: none;
+    //         padding: 0 1rem;
+
+    //         &:hover {
+    //             color: $green;
+    //             transition: all 0.3s ease;
+    //         }
+    //     }
+
+    //     .btn {
+    //         @include btn;
+
+    //     }
+
+    // }
+}
+
+    .navbar-white {
+        background-color: $light; 
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem calc((90vw - 1200px) / 2);
+        z-index: 1;
+        position: relative;
+    
+        .navbar__logo {
+            @include content-center;
+        }
+        .navbar__logo img{
+            width: 8em;
+        }
+    
+        &__bars {
+            opacity: 0;
+    
+            @include tablet {
+                color: $dark;
+                opacity: 1;
+                position: absolute;
+                top: 22px;
+                right: 20px;
+                font-size: 2rem;
+            }
+        }
+    
+    
+        .nav-item{
+            padding: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            margin: 0 7px;
+            position: relative;
+        }
+        .active{
+            color: $green!important;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+    
+        }
+        
+    
+        .link{
+            position: relative;
+            text-decoration: none;
+            color: $gray;
+            letter-spacing: 0.5px;
+            padding: 0 10px;
+        }
+        .link:after{
+            content: "";
+            position: absolute;
+            background-color: $green;
+            width: 0;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.3s ease;
+    
+        }
+    
+        .link:hover{
+            color: $green;
+            font-weight: 600;
+        }
+    
+        .link:hover:after{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+    
+        }
+        .btn {
+            @include btn;
+        
+        }
+    
+    }
+// ............................navabar logged in begins..........................
+    .navbar-loggedin {
+        background-color: $light; 
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1rem calc((110vw - 1550px) / 2);
+        z-index: 1;
+        position: relative;
+    
+        .navbar__logo {
+            @include content-center;
+        }
+        .navbar__logo img{
+            width: 8em;
+        }
+    
+        &__bars {
+            opacity: 0;
+    
+            @include tablet {
+                color: $dark;
+                opacity: 1;
+                position: absolute;
+                top: 22px;
+                right: 20px;
+                font-size: 2rem;
+            }
+        }
+        .navbar__menu{
+            display: flex;
+            align-items: center;
+        }
+        .nav-item{
+            padding: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            margin: 0 7px;
+            position: relative;
+        }
+        .active{
+            color: $green!important;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            .link{
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+            }
+        }
+        .link{
+            position: relative;
+            text-decoration: none;
+            color: $gray;
+            letter-spacing: 0.5px;
+            padding: 0 10px;
+        }
+        .link:hover:after{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .link:after{
+            content: "";
+            position: absolute;
+            background-color: $green;
+            width: 0;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.3s ease;
+        }
+        .link:hover{
+            color: $green;
+            font-weight: 600;
+        }
+        
+        .btn-navGreen {
+            @include btn-green;
+            padding: 1.3em 2em;
+            margin-left: 16px;
+            i{
+                margin-left: 10px;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .btn {
+            @include btn;
+            margin-left: 16px;
+            margin-bottom: 0;
+            i{
+                 margin-left: 0.5em;
+            }
+            i:hover{
+                background-color: $green;
+                outline: none;
+            }
+        }
+        
+    }
+// ............................navabar logged in ends..........................

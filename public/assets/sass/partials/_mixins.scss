@@ -1,0 +1,458 @@
+@mixin content-center{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    @mixin content-centered{
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+    }   
+    @mixin items-center{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    @mixin self-center{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
+
+    @mixin btn-green {
+        @include content-center;
+        border-radius: 10px;
+        color: $light;
+        background: $green;  
+        border: solid 1px $green;
+    }
+    @mixin btn-greenborder {
+        @include content-center;
+        border-radius: 10px;
+        color: $light;
+        background: transparent;  
+        border: solid 1px $green;
+    }
+
+    @mixin btn-smpad {
+        @include content-center;
+        border: solid 1px $green;
+        outline: 1px $green;
+        border-radius: 7px;
+        // margin-left: 10px;
+        color: $green;
+        a{
+            color: $green;
+        }
+    
+        &:hover {
+            background: $green;
+            color: $light;
+            transition: all 0.3s ease;
+        }
+        
+    }
+
+
+    @mixin index-card {
+        .card{
+            padding: 0.5em;
+            border-radius: 16px;
+            width: 18em;
+            box-shadow: 0px 12px 16px #a18e8e14;
+            overflow: hidden;
+    
+             img{
+                border-radius: 16px;
+                width: 100%;
+                height: 14em;
+                object-fit: contain;
+            }
+    
+            .units{
+                color: $gray;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .prod-name{
+                margin-top: 1em;
+                line-height: 0.5px;
+                h6{
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $dark-light;
+                }
+    
+            }
+            .prod-price{
+                margin-top: 1em;
+                margin-bottom: 1.5em;
+                line-height: 0.5px;
+    
+                .price{
+                    color: $green;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+    
+            .card-post{
+                @include content-center;
+                margin-bottom: 1em;
+                overflow: hidden;
+
+                .left{
+                    margin-top: 0;
+                    width: 20%;
+                    margin-left: 0;
+                }
+                .thumbnail img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50px;
+                }
+                .rightt{
+                    margin-top: 1em;
+                    width: 80%;
+                    line-height: 0.5px;
+
+    
+                    .dealer{
+                        font-weight: 700;
+                        font-size: 11px;
+    
+                    }
+                    .time{
+                        font-size: 9px;
+    
+                    }
+    
+                }
+    
+            }  
+        }
+    }
+
+    @mixin green-text{
+        color: $green;
+    }
+
+    @mixin scroll-info{
+        @include content-center;
+        justify-content: space-between;
+        border-top: solid 2px $border-light;
+        width: 100%;
+        height: 10%;
+        padding: 0;
+        overflow: hidden;
+
+        .far-left{
+            @include content-center;
+            width: 10vw;
+            padding-left: 1.5em;
+            background-color: $dark;
+            color: $light;
+            font-size: 14px;
+            margin: 0;
+            z-index: 6;
+
+        }
+
+        .far-right{
+            width: 10vw;
+            margin: 0;
+            padding: 0;
+            background-color: $background-light;
+            opacity: 0.8;
+            // overflow: hidden;
+
+
+
+        }
+        .center{
+            width: 80vw;
+            background-color: $background-light;
+            padding-top: 0.5em;
+            // overflow: hidden;
+
+        }
+
+        .center ul{
+            @include content-center;
+            list-style: none;
+            justify-content: space-evenly;
+            padding-top: 0.5em;
+            animation: scrolling 10s linear infinite;
+
+
+            li{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                margin-right: 8em;
+                padding: 0;
+                line-height: 5px;
+                font-size: 12px
+            }
+
+            .price-arrow{
+                @include content-center;
+                line-height: 5px;
+                margin: 0;
+                padding: 0;
+
+
+                p{
+                    padding-top: 1em;
+                }
+                img{
+                    padding-top: 0;
+                }
+            }
+        }
+
+    }
+
+    @mixin welcome-account {
+            width: 300px;
+            height: 180px;
+            background-color: $background-light;
+            text-decoration: none;
+            margin-bottom: 3em;
+            border-radius: 16px;
+            color: $dark-light;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+    
+    
+            &:hover {
+                background: $green;
+                color: $light;
+                transition: all 0.3s ease;
+            }
+        }
+
+        @mixin search-bar{
+            input{
+                height: 3em;
+                display: block;
+                border-radius: 9px;
+                position: relative;
+                padding-left: 3em;
+            }
+            img{
+                position: absolute;
+                margin-left: 1em;
+                margin-top: 0.8em;
+                 z-index: 1;
+            }
+        }
+
+        @mixin list-text{
+            .units{
+                color: $gray;
+                font-size: 14px;
+                text-align: center;
+            }
+                h6{
+                    font-size: 14px;
+                    color: $dark-light;
+                    align-self: center;
+                }
+            
+            .prod-price{
+                display: flex;
+                margin-bottom: 0;
+        
+                .price{
+                    color: $green;
+                    font-size: 15px;
+                    font-weight: 700;
+                    text-align: center;
+                    margin-right: 0.5em;
+                }
+            }
+        
+        }    
+    
+        @mixin product-text{
+    .units{
+        color: $gray;
+        font-size: 14px;
+        text-align: center;
+
+    }
+    .prod-name{
+        margin-top: 1.5em;
+        line-height: 0.5px;
+        h6{
+            font-size: 14px;
+            color: $dark-light;
+            align-self: center;
+
+        }
+
+    }
+    .prod-price{
+        margin-top: 1.5em;
+        margin-bottom: 0;
+        line-height: 0.5px;
+
+        .price{
+            color: $green;
+            font-size: 15px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+    }
+
+}    
+
+@mixin switch-button{
+    input[type="checkbox"]{
+        position: relative;
+        width: 60px;
+        height: 30px;
+        -webkit-appearance: none;
+        background: $blue-light;
+        outline: none;
+        border-radius: 20px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+        transition: 0.5s;
+    }
+    input:checked[type="checkbox"]{
+        background: $green;
+    }
+    input[type="checkbox"]:before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        background: $light;
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        transition: 0.5s;
+    }
+    input:checked[type="checkbox"]:before{
+        left: 40px;
+    }
+}
+
+@mixin switch-button-active{
+    input:checked[type="checkbox"]{
+        position: relative;
+        width: 60px;
+        height: 30px;
+        -webkit-appearance: none;
+        background: $green;
+        outline: none;
+        border-radius: 20px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+        transition: 0.5s;
+    }
+    input:checked[type="checkbox"]{
+        background: $green;
+    }
+    input[type="checkbox"]:before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        background: $green;
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        transition: 0.5s;
+    }
+    input:checked[type="checkbox"]:before{
+        right: 40px;
+    }
+}
+    
+@mixin white-box-content{
+    
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2em;
+
+        h4{
+            margin: 1em 10.5em;
+        }
+        .inner-button{
+            display: flex;
+            justify-content: space-around;  
+        }
+
+        a{
+            text-decoration: none; 
+        }
+        .btn-lg{
+            width: 14em;
+            height: 4em;
+            border-radius: 16px;
+            box-shadow: 0px 8px 6px #00000014;
+            display: flex;
+            justify-content: space-between;
+            img{
+                padding: 1em;
+            }
+            p{
+                font-size: 14px;
+                padding: 1em 2em 1em 0;
+            }
+        }
+        .green{
+            background-color: $green;
+            color: $light;
+
+        }
+        .yellow{
+            background-color: yellow;
+            color: $dark;
+        }
+}
+@mixin greenText{
+    color: $green;
+    text-decoration: none;
+}
+
+@mixin middleGreen{
+    
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .mid-green-content{
+            color: $light;
+            img{
+                margin-left: 43%;
+                margin-top: 2em;
+                margin-bottom: 1em;
+            }
+            h3{
+                margin-bottom: 1em;
+                display: flex;
+                justify-content: space-around;
+            }
+            p{
+                line-height: 5px;
+                display: flex;
+                justify-content: space-around;
+            }
+            .space{
+                margin-top: 2em;
+            }              
+        }
+    
+}

@@ -1,0 +1,287 @@
+@import 'navbar';
+@import 'colors';
+@import 'mixins';
+@import 'login';
+@import 'footmenu';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+
+// Hero section CSS
+
+.hero {
+    margin-top: 0;
+    background-color: $background-light;
+
+    .hero__container {
+        margin: 0 auto;
+        height: 100vh;
+        z-index: 1;
+        @include content-center;
+
+        .hero__home {
+            top: 12em;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .hero__home img{
+            width: 101%;
+            // height: 100%;
+            object-fit: cover;
+        }
+        
+            .left {
+                width: 30%;
+                position: absolute;
+                top: 0;
+                margin-left: 6.5em;
+
+                h3{
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                p {
+                    width: 85%;
+                }
+            }
+            .search_filter{
+                display: inline-block;
+                background-color: $light;
+                position: absolute;
+                margin-top:15em;
+                left: 6.5em;
+                width: 40%;
+                height: 25vh;
+                padding: 2em;
+                border-radius: 7px;
+
+                .col-4 input {
+                    opacity: 0.5;
+                    font-size: 11px;
+                    font-weight: bold;
+                    border: solid 1px $light;
+                }
+                .col-4 select{
+                    opacity: 0.5;
+                    font-size: 11px;
+                    font-weight: bold;
+                    border: solid 1px $light;
+
+                }
+
+                .btn {
+                    background: $light;
+                    margin-top: 2em;
+                    @include btn;
+
+                }
+
+            }
+        
+        }
+    }
+
+// Fixed scroll info
+
+.scroll-info{
+    position: fixed;
+    bottom: 0px;
+    display: block;
+    @include scroll-info;
+    z-index: 3;
+
+    @keyframes scrolling {
+        0% { transform: translateX(0); }
+        100% { transform: translatex(-1200px); }
+    }
+}
+
+// Hero-two section CSS
+
+.hero-two{
+    background-color: $background-light;
+    margin-top: 1em;
+    overflow: hidden;
+
+    .left{
+        margin-top: 2em;
+        margin-left: 6.5em;
+        width: 20%;
+
+        .btn {
+            background: $light;
+            @include btn;
+        }
+    }
+
+    .right{
+        width: 65%;
+        margin-top: 1.5em;
+        @include index-card;
+
+        .two {
+            margin-top: 10em;
+        }
+        .three {
+            margin-top: 5em;
+        }
+
+        .marquee{
+            width: 130vw;
+            height: 100%;
+            overflow: hidden;
+
+            .marquee-content {
+                display: flex;
+                justify-content: space-evenly;
+                list-style: none;
+                animation: scrolling 10s linear infinite;
+
+                .marquee-item{
+                    margin-left: 2em;
+                    width: 18em;
+                    height: 100%;
+                }
+            }
+            @keyframes scrolling {
+                0% { transform: translateX(0); }
+                100% { transform: translatex(-1000px); }                
+            }
+        }
+        
+    }
+
+}
+
+// Hero-three section CSS
+
+.hero-three{
+    background-color: $background-light;
+    margin-top: 1em;
+    overflow: hidden;
+
+    .left-text{
+        margin-top: 2em;
+        margin-left: 6.5em;
+        width: 20%;
+
+        .btn {
+            background: $light;
+            @include btn;
+        }
+    }
+
+    .slide{
+        width: 100%;
+        margin-top: 1.5em;
+        margin-left: 6.5em;
+        overflow: hidden;
+        @include index-card;
+
+        .two {
+            margin-top: 10em;
+        }
+        .three {
+            margin-top: 5em;
+        }
+
+        .marquee{
+            width: 150vw;
+            height: 100%;
+            overflow: hidden;
+
+            .marquee-content {
+                display: flex;
+                justify-content: space-evenly;
+                list-style: none;
+                animation: scrolling 10s linear infinite;
+
+                .marquee-item{
+                    margin-left: 2em;
+                    width: 18em;
+                    height: 100%;
+                }
+            }
+            @keyframes scrolling {
+                0% { transform: translateX(0); }
+                100% { transform: translatex(-1000px); }
+            }
+        }   
+    }
+}
+
+// Hero-four section CSS
+
+.hero-four{
+    background-color: $background-light;
+    margin-top: 1em;
+    padding-top: 10em;
+    height: 100%;
+    overflow: hidden;
+
+    .subscribe-container{
+        margin-top: 0;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 16em;
+
+        .img{
+            background: url(../images/newsletter-bg.jpeg);
+            height: 22em;
+            width: 70em;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        .overlay{
+            height: 22em;
+            width: 70em;
+            background: $dark-light;
+            position: absolute;
+            opacity: 0.4;
+            border-radius: 10px;
+        }
+        .newsletter{
+            z-index: 2;
+            color: $light;
+            margin-left: 3em;
+            margin-top: 0;
+            width: 25em;
+
+            form{
+
+                input{
+                    height: 4em;
+                    display: block;
+                    border-radius: 9px;
+                    position: relative;
+                }
+                .button{
+                    position: absolute;
+                    margin-left: 19em;
+                    margin-top: -3.7em;
+                    width: 90px;
+                    height: 3.4em;
+                    color: $light;
+                    background: $green;
+                    outline: none;
+                    border: none;
+                    padding: 1em;
+                    border-radius: 9px;
+
+                }
+            }           
+        }
+    }
+}
+

@@ -1,0 +1,152 @@
+@mixin btn-greenpad {
+    border: solid 1px $green;
+    border-radius: 10px;
+    color: $light;
+    background-color: $green;
+    box-shadow: 0px 8px 16px #00000029;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    a{
+        color: $light;
+        text-decoration: none;
+    }
+}
+@mixin btn-redpad {
+    border: solid 1px $red;
+    border-radius: 10px;
+    color: $light;
+    background-color: $red;
+    box-shadow: 0px 8px 16px #00000029;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    a{
+        color: $light;
+        text-decoration: none;
+    }
+}
+
+@mixin btn {
+    padding: 12px 24px;
+    border: solid 1px $green;
+    outline: 1px $green;
+    border-radius: 7px;
+    color: $green;
+    
+    &:hover {
+        background: $green;
+        color: $light;
+        transition: all 0.3s ease;
+    } 
+    
+}
+
+    @mixin btn-greenborder {
+        @include content-center;
+        border-radius: 10px;
+        color: $light;
+        background: transparent;  
+        border: solid 1px $green;
+    }
+
+    @mixin btn-smpad {
+        @include content-center;
+        border: solid 1px $green;
+        outline: 1px $green;
+        border-radius: 7px;
+        // margin-left: 10px;
+        color: $green;
+        a{
+            color: $green;
+        }
+    
+        &:hover {
+            background: $green;
+            color: $light;
+            transition: all 0.3s ease;
+        }
+        
+    }
+
+
+@mixin btn-green{
+    padding: 12px 24px;
+    border: solid 1px $green;
+    outline: 1px $green;
+    border-radius: 10px;
+    color: $light;
+    background: $green;
+    box-shadow: 0px 8px 16px #00000029;
+    font-size: 12px;
+        
+    a{
+        color: $light;
+        text-decoration: none;
+    }
+}
+
+    @mixin button{
+        margin-top: 1em;
+        margin-bottom: 3em;
+        padding: 12px 24px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 2px solid $border-light;
+        transition: all 0.3s ease;
+        &:hover{
+            padding-left: 6px;
+            background-color: $blue-light;  
+            a{
+                color: $gray;
+            }
+        }
+        a{
+            font-size: 14px;
+            font-weight: bold;
+            color: $gray;
+            text-decoration: none;
+        }
+        i{
+            color: $gray;
+            margin-right: 1em;
+            font-size: 15px;
+        }
+}
+
+    @mixin btn-greenFullWidth{
+        @include items-center;
+        margin-top: 2em;
+        width: 100%;
+        height: 4em;
+        color: $light;
+        background: $green;
+        border-radius: 10px;
+        // font-size: 14px;
+    }
+
+    @mixin button-choose-file{
+        margin-right: 0;
+        padding: 0 1em;
+        height: 2em;
+        background-color: $blue-light;
+        color: $gray;
+        border-radius: 6px;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        position: absolute;
+    }
+
+    @mixin button-choose-file-green{
+        margin-right: 0;
+        padding: 0 1em;
+        height: 2em;
+        background-color: $green;
+        color: $light;
+        border-radius: 6px;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        position: absolute;
+    }

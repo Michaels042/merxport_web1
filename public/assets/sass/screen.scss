@@ -1,0 +1,51 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+
+// @import "compass";
+
+// @import "compass/reset";
+
+// @import "compass/utilities";
+
+@import "partials/base";
+
+@import "partials/blog";
+@import "partials/buttons";
+@import "partials/colors";
+@import "partials/contact";
+@import "partials/footmenu";
+@import "partials/login";
+@import "partials/overlay-left";
+@import "partials/marketplace";
+@import "partials/media-queries";
+@import "partials/modal-page";
+@import "partials/mixins";
+@import "partials/navbar";
+@import "partials/welcome";
+@import "partials/fullbody";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+} 
+
+
+// @import "partials/utils";
+// @import "partials/form";
+// @import "partials/universal_fix";
+// @import "partials/landing_page";
+// @import "partials/auth";
+// @import "partials/exchange";
+// @import "partials/transaction";
+// @import "partials/others";
+// @import "partials/terms";
+// @import "partials/about";
+// @import "partials/404";
+// @import "partials/profile"
